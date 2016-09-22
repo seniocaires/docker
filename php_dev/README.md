@@ -1,2 +1,6 @@
 # php_dev
-Dockerfile do ambiente de desenvolvimento PHP (apache, php, pdo, pdo oci, oracle)
+apache, php, pdo, pdo oci, oracle
+<br/>
+Dockerfile do ambiente de desenvolvimento PHP 
+<br/>
+Imagem: https://hub.docker.com/r/seniocaires/php_dev/
