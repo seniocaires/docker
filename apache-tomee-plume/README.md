@@ -1,2 +1,2 @@
-# Apache Tomee
-Imagem: https://hub.docker.com/r/seniocaires/apache-tomee/
+# Apache Tomee Plume
+Imagem: https://hub.docker.com/r/seniocaires/apache-tomee-plume/
