@@ -1,0 +1,5 @@
+# Construir a imagem
+docker build -t seniocaires/nginx .
+
+# Iniciar o container
+docker run -d -p 80:80 -p 443:443 --link apache_shared:apache_shared --name nginx seniocaires/nginx

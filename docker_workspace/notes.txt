@@ -1,0 +1,6 @@
+# Adding a port proxy
+netsh interface portproxy add v4tov4 listenaddress=127.0.0.1 listenport=80 connectaddress=10.75.0.1 connectport=80
+# Showing all existing port proxies
+netsh interface portproxy show v4tov4
+# Deleting the same port proxy
+netsh interface portproxy delete v4tov4 listenaddress=127.0.0.1 listenport=80

@@ -1,0 +1,10 @@
+DirectoryIndex  index.html  index.php  /dev/_h5ai/public/index.php
+
+#AuthPAM_Enabled off
+AuthName "Members Only"
+AuthType Basic
+AuthBasicProvider file
+AuthUserFile /var/www/html/.htpasswd
+# Password generator : http://www.htaccesstools.com/htpasswd-generator/
+require valid-user
+#Satisfy any

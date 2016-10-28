@@ -1,0 +1,10 @@
+FROM nginx:latest
+
+MAINTAINER Senio Caires <seniocaires@gmail.com>
+
+RUN apt-get update
+
+COPY files/nginx.conf /etc/nginx/nginx.conf
+COPY files/localhost.conf /etc/nginx/sites-enabled/localhost.conf
+
+EXPOSE 80 443
