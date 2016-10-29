@@ -7,5 +7,7 @@ netsh interface portproxy delete v4tov4 listenaddress=127.0.0.1 listenport=80
 
 # Montar particao Linux-VirtualBox-Apache : http://jimmybonney.com/articles/configure_virtualbox_shared_folder_apache_virtual_host/
 mount -t vboxsf -o rw,uid=0,gid=0 docker_workspace /media/sf_docker_workspace
+nano /etc/modules
+preencher com "vboxsf" para que seja carregado antes da montagem dos drivers - para não dar erro na inicialização.
 nano /etc/fstab
 preencher com -> docker_workspace /media/sf_docker_workspace   vboxsf  rw,uid=0,gid=0    0   0
