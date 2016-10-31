@@ -1,2 +1,5 @@
+# Construir a imagem
+docker build -t seniocaires/apache_shared .
+
 # Iniciar o container
 docker run -d -v E:\docker_workspace\volumes\apache_shared:/var/www/html --name=apache_shared -it seniocaires/php_dev
