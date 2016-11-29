@@ -18,5 +18,5 @@ RUN apt-get update && \
     ln -s libclntsh.so.12.1 libclntsh.so && \
     export LD_LIBRARY_PATH=/opt/oracle/instantclient:$LD_LIBRARY_PATH && \
     ldconfig && \
-    rm -rf /tmp
+    rm -rf /tmp/*
    
