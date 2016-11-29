@@ -19,3 +19,4 @@ RUN apt-get update && \
     export LD_LIBRARY_PATH=/opt/oracle/instantclient:$LD_LIBRARY_PATH && \
     ldconfig && \
     rm -rf /tmp
+   
