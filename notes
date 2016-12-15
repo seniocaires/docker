@@ -1,0 +1,8 @@
+Remover containers nao usados
+docker rm $(docker ps -q -f status=exited)
+Remover imagens nao usadas
+docker rmi $(docker images | grep "^<none>" | awk "{print $3}")
+Volumes orfaos
+docker volume ls -qf dangling=true
+Remover volumes orfaos
+docker volume rm $(docker volume ls -qf dangling=true)
