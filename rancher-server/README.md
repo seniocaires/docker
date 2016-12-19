@@ -8,6 +8,8 @@ Create CERTS
 docker run --rm -e COMMON_NAME=meudominio.com.br -e KEY_NAME=meudominio.com.br -v $PWD/certs:/certs seniocaires/openssl
 ```
 
+Edit files/localhost.conf -> apply yourdomain
+
 Build image rancher_nginx
 ```shell
 docker build -f Dockerfile-nginx -t rancher_nginx .
