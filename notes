@@ -6,3 +6,12 @@ Volumes orfaos
 docker volume ls -qf dangling=true
 Remover volumes orfaos
 docker volume rm $(docker volume ls -qf dangling=true)
+
+
+--------------------------------------------------------------
+Gerar certificados Let's encrypt com Docker
+--------------------------------------------------------------
+https://thisendout.com/2016/04/21/letsencrypt-certificate-generation-with-docker/
+docker run -d -p 80:80 --name nginx -v /usr/share/nginx/html nginx
+docker run -it --name letsencrypt --volumes-from nginx quay.io/letsencrypt/letsencrypt certonly --agree-tos --webroot --webroot-path /usr/share/nginx/html -m seniocaires@gmail.com -d dominio.com.br.br
+docker cp letsencrypt:/etc/letsencrypt/ letsencrypt
