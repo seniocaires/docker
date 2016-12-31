@@ -6,7 +6,8 @@ Volumes orfaos
 docker volume ls -qf dangling=true
 Remover volumes orfaos
 docker volume rm $(docker volume ls -qf dangling=true)
-
+Stats com os nome dos containers
+docker stats $(docker ps --format={{.Names}})
 
 --------------------------------------------------------------
 Gerar certificados Let's encrypt com Docker
