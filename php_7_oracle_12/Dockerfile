@@ -4,7 +4,7 @@ ADD files /tmp/files
 
 RUN apt update \
     && apt install -y apache2 zip \
-    && apt-get install -y php7.0-mysql php7.0-curl php7.0-json php7.0-cgi php7.0 libapache2-mod-php7.0 \
+    && apt-get install -y php7.0-mysql php7.0-curl php7.0-json php7.0-cgi php7.0 php7.0-mbstring libapache2-mod-php7.0 \
     && echo "<?php phpinfo() ?>" > /var/www/html/info.php \
     && apt install -y php7.0-dev build-essential php-pear libaio1 \
     && apt install -y alien \
