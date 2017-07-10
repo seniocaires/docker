@@ -16,3 +16,11 @@ https://thisendout.com/2016/04/21/letsencrypt-certificate-generation-with-docker
 docker run -d -p 80:80 --name nginx -v /usr/share/nginx/html nginx
 docker run -it --name letsencrypt --volumes-from nginx quay.io/letsencrypt/letsencrypt certonly --agree-tos --webroot --webroot-path /usr/share/nginx/html -m seniocaires@gmail.com -d dominio.com.br.br
 docker cp letsencrypt:/etc/letsencrypt/ letsencrypt
+
+--------------------------------------------------------------
+Habilitar API Debian
+--------------------------------------------------------------
+nano /lib/systemd/system/docker.service 
+ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:4243 -H unix:///var/run/docker.sock 
+systemctl daemon-reload 
+service docker restart
