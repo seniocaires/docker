@@ -1,0 +1,6 @@
+{
+  "name": "teste",
+  "dependencies": {
+    "oracledb": "1.13.1"
+  }
+}
